@@ -40,7 +40,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
             >
-              Portfolio
+              Nishant Sharma
             </button>
           </div>
 
@@ -66,8 +66,7 @@ const Navigation = () => {
               onClick={()=>{
                   window.location.href='https://drive.google.com/file/d/1WPOBPxK4gDS-cFI_e0W9xT5LBdqGjgj4/view';}}
               
-            >
-              <Download className="mr-2 h-4 w-4" />
+            >             
               Resume
             </Button>
           </div>
@@ -103,7 +102,7 @@ const Navigation = () => {
                   size="sm"
                   className="w-full glass-card border-primary/30 text-foreground hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Download className="mr-2 h-4 w-4" />
+              
                   Download Resume
                 </Button>
               </div>

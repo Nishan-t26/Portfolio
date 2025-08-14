@@ -35,7 +35,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-300 mb-2"
             >
-              Portfolio
+              Nishant Sharma
             </button>
             <p className="text-muted-foreground">
               Building the future with code, creativity, and passion.
@@ -67,11 +67,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Border */}
-        <div className="mt-8 pt-8 border-t border-primary/10 text-center">
+        {/* <div className="mt-8 pt-8 border-t border-primary/10 text-center">
           <p className="text-sm text-muted-foreground">
             Designed and developed with modern web technologies
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

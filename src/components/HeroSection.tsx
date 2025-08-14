@@ -70,9 +70,9 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="glass-card border-primary/30 text-foreground hover:bg-primary/10 px-8 py-6 text-lg rounded-xl hover:scale-105 transition-all duration-300"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => {window.location.href='https://drive.google.com/file/d/1WPOBPxK4gDS-cFI_e0W9xT5LBdqGjgj4/view';}}
             >
-              <Download className="mr-2 h-5 w-5" />
+              
               Download Resume
             </Button>
           </div>

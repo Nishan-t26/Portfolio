@@ -46,22 +46,17 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "nishantshamra7408.com",
-      href: "mailto:nishantshamra7408.com",
+      
+      value: "nishantshamra7408@gmail.com",
+      href: "mailto:nishantshamra7408@gmail.com",
     },
     {
       icon: Phone,
-      label: "Phone",
+     
       value: "+91 637-569-9408",
       href: "tel:+916375699408",
     },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Jodhpur, Rajasthan",
-      href: "#",
-    },
+  
   ];
 
   const socialLinks = [
@@ -74,7 +69,7 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/nishant-sharma-ns",
+      href: "https://linkedin.com/in/nishant-sharma-ns",
       color: "hover:text-blue-400",
     },
    
@@ -95,7 +90,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          {/* <div className="lg:col-span-2">
             <Card className="glass-card border-primary/20">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold">
@@ -159,10 +154,10 @@ const ContactSection = () => {
                 </form>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
 
           {/* Contact Info & Social Links */}
-          <div className="space-y-8">
+          <div className="space-y-2">
             {/* Contact Information */}
             <Card className="glass-card border-primary/20">
               <CardHeader>
@@ -173,17 +168,15 @@ const ContactSection = () => {
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
-                    key={info.label}
+                   
                     href={info.href}
-                    className="flex items-center gap-3 p-3 rounded-lg glass-card border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 group"
+                    className="flex items-center  gap-3 p-3 rounded-lg glass-card border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 group"
                   >
                     <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
                       <info.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">
-                        {info.label}
-                      </p>
+                     
                       <p className="font-medium">{info.value}</p>
                     </div>
                   </a>
@@ -192,7 +185,28 @@ const ContactSection = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass-card border-primary/20">
+            
+
+            {/* Availability Status */}
+           
+          </div>
+          
+            <div> <Card className="glass-card border-primary/20">
+              <CardContent className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                  <Badge className="bg-green-500/20 text-green-400 border-0">
+                    Open to work
+                  </Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Currently accepting new job opportunities. Let's
+                  build something amazing together!
+                </p>
+              </CardContent>
+            </Card></div>
+
+            <div ><Card className="glass-card border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
                   Connect With Me
@@ -216,24 +230,7 @@ const ContactSection = () => {
                   ))}
                 </div>
               </CardContent>
-            </Card>
-
-            {/* Availability Status */}
-            <Card className="glass-card border-primary/20">
-              <CardContent className="p-6 text-center">
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <Badge className="bg-green-500/20 text-green-400 border-0">
-                    Available for Projects
-                  </Badge>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Currently accepting new projects and opportunities. Let's
-                  build something amazing together!
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+            </Card></div>
         </div>
       </div>
     </section>
