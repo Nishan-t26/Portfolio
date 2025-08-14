@@ -73,7 +73,7 @@ const HeroSection = () => {
               onClick={() => {window.location.href='https://drive.google.com/file/d/1WPOBPxK4gDS-cFI_e0W9xT5LBdqGjgj4/view';}}
             >
               
-              Download Resume
+              Resume
             </Button>
           </div>
 

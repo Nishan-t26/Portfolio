@@ -103,7 +103,7 @@ const Navigation = () => {
                   className="w-full glass-card border-primary/30 text-foreground hover:bg-primary/10 transition-all duration-300"
                 >
               
-                  Download Resume
+                  Resume
                 </Button>
               </div>
             </div>
