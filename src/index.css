@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern Portfolio Color System */
+    --background: 240 10% 3.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 6% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 6% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 85% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 196 75% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 85% 65%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio-specific design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(263 85% 65% / 0.8), hsl(196 75% 45% / 0.8));
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glow-primary: 0 0 30px hsl(263 85% 65% / 0.3);
+    --glow-accent: 0 0 30px hsl(196 75% 45% / 0.3);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --backdrop-blur: blur(12px);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 263 85% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 196 75% 45%;
+    --accent-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 263 85% 65%;
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'system-ui', sans-serif;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/5 backdrop-blur-sm border border-white/10;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-1 {
+    animation: fadeInUp 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-2 {
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-3 {
+    animation: fadeInUp 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(263 85% 65% / 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(263 85% 65% / 0.4);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
